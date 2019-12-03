@@ -3,6 +3,7 @@
 ### Introduction
 
 - [ ] A simple implementation of grade-school classic “rock paper scissors”.
+![ ](https://github.com/Alina-Domnich/Rock-Paper-Scissors/blob/master/assets/rock-paper-scissors-icon-0.jpg)
 
 ### Build with
 
