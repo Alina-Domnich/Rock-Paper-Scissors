@@ -1,6 +1,6 @@
-const game = () => {
-    let pScore = 0;
-    let cScore = 0;
+const RockPaperScissor = () => {
+    let PlayerCount = 0;
+    let ComputerCount = 0;
   
     //Start the Game
     const startGame = () => {
@@ -51,8 +51,8 @@ const game = () => {
     const updateScore = () => {
       const playerScore = document.querySelector(".player-score p");
       const computerScore = document.querySelector(".computer-score p");
-      playerScore.textContent = pScore;
-      computerScore.textContent = cScore;
+      playerScore.textContent = PlayerCount;
+      computerScore.textContent = ComputerCount;
     };
   
     const compareHands = (playerChoice, computerChoice) => {
@@ -67,12 +67,12 @@ const game = () => {
       if (playerChoice === "rock") {
         if (computerChoice === "scissors") {
           winner.textContent = "Player Wins";
-          pScore++;
+          PlayerCount++;
           updateScore();
           return;
         } else {
           winner.textContent = "Computer Wins";
-          cScore++;
+          ComputerCount++;
           updateScore();
           return;
         }
@@ -81,12 +81,12 @@ const game = () => {
       if (playerChoice === "paper") {
         if (computerChoice === "scissors") {
           winner.textContent = "Computer Wins";
-          cScore++;
+          ComputerCount++;
           updateScore();
           return;
         } else {
           winner.textContent = "Player Wins";
-          pScore++;
+          PlayerCount++;
           updateScore();
           return;
         }
@@ -95,12 +95,12 @@ const game = () => {
       if (playerChoice === "scissors") {
         if (computerChoice === "rock") {
           winner.textContent = "Computer Wins";
-          cScore++;
+          ComputerCount++;
           updateScore();
           return;
         } else {
           winner.textContent = "Player Wins";
-          pScore++;
+          PlayerCount++;
           updateScore();
           return;
         }
@@ -112,5 +112,5 @@ const game = () => {
     playMatch();
   };
   
-  //start the game function
-  game();
+  //To start the game we call function RockPaperScissor
+  RockPaperScissor();
